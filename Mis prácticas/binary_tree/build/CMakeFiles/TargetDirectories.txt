@@ -1,0 +1,4 @@
+/home/i02veegc/segundo/ED/binary_tree2/binary_tree/build/CMakeFiles/test_btree_node.dir
+/home/i02veegc/segundo/ED/binary_tree2/binary_tree/build/CMakeFiles/test_btree.dir
+/home/i02veegc/segundo/ED/binary_tree2/binary_tree/build/CMakeFiles/edit_cache.dir
+/home/i02veegc/segundo/ED/binary_tree2/binary_tree/build/CMakeFiles/rebuild_cache.dir
