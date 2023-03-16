@@ -1,0 +1,447 @@
+\hypertarget{btree__utils_8hpp}{}\doxysection{btree\+\_\+utils.\+hpp File Reference}
+\label{btree__utils_8hpp}\index{btree\_utils.hpp@{btree\_utils.hpp}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include \char`\"{}btree.\+hpp\char`\"{}}\newline
+Include dependency graph for btree\+\_\+utils.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\int \mbox{\hyperlink{btree__utils_8hpp_ad61617ff304d328f85464af83e92662d}{compute\+\_\+height}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref t)
+\begin{DoxyCompactList}\small\item\em Compute the height of a tree. The tree\textquotesingle{}s height is the longitude of the longest branch connecting the root node with a leaf node, or -\/1 if the tree was empty. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\size\+\_\+t \mbox{\hyperlink{btree__utils_8hpp_ab06eb34a56dd7c5dec26df4b428dad00}{compute\+\_\+size}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref t)
+\begin{DoxyCompactList}\small\item\em Compute the number of nodes in the tree. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , typename Processor $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_a9ca9cd9257884bf2deeb15193beeacd6}{prefix\+\_\+process}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, Processor \&p)
+\begin{DoxyCompactList}\small\item\em Prefix processing of a binary tree The template class Processor must have an closure interface\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Processor $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_a218799582ef6caf5a301d92f21320205}{infix\+\_\+process}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, Processor \&p)
+\begin{DoxyCompactList}\small\item\em Infix processing of a binary tree. The template class Processor must have an apply interface\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Processor $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_a3abaedee2db151dcdee505b1421aa133}{postfix\+\_\+process}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, Processor \&p)
+\begin{DoxyCompactList}\small\item\em Postfix processing of a binary tree. The template class Processor must have an apply interface\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class Processor $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_af6901921f3429f3b2c1f8fcdf4d9e9e8}{breadth\+\_\+first\+\_\+process}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, Processor \&p)
+\begin{DoxyCompactList}\small\item\em Bread-\/first processing of a btree. The template class Processor must have an apply interface\+: \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& \mbox{\hyperlink{btree__utils_8hpp_a9fcff157300a552c5018d9b1683d1d25}{print\+\_\+prefix}} (std\+::ostream \&out, typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree)
+\begin{DoxyCompactList}\small\item\em Output the items of a binary tree following a pre-\/fix order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& \mbox{\hyperlink{btree__utils_8hpp_afa90cf1a8aa497a59fe67f71ef2bc586}{print\+\_\+infix}} (std\+::ostream \&out, typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree)
+\begin{DoxyCompactList}\small\item\em Output the items of a binary tree following a in-\/fix order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& \mbox{\hyperlink{btree__utils_8hpp_ac16a33c094ae989e2a1455074d8086d7}{print\+\_\+postfix}} (std\+::ostream \&out, typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree)
+\begin{DoxyCompactList}\small\item\em Output the items of a binary tree following a post-\/fix order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& \mbox{\hyperlink{btree__utils_8hpp_a7994a8cbe2d4d9740cc1116394ffbd41}{print\+\_\+breadth\+\_\+first}} (std\+::ostream \&out, typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree)
+\begin{DoxyCompactList}\small\item\em Output the items of a binary tree following a breadth first order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_aee13550f7d238380a2566256492e2959}{search\+\_\+prefix}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, const T \&it, size\+\_\+t \&count)
+\begin{DoxyCompactList}\small\item\em Search a item value in a binary tree following a pre-\/fix order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_a4b06fffed8e01324138ddd7776482ccb}{search\+\_\+infix}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, const T \&it, size\+\_\+t \&count)
+\begin{DoxyCompactList}\small\item\em Search a item value in a binary tree following a in-\/fix order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_a1ade1a1a17ad3769ed2a371b3c89777e}{search\+\_\+postfix}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, const T \&it, size\+\_\+t \&count)
+\begin{DoxyCompactList}\small\item\em Search a item value in a binary tree following a post-\/fix order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_ab5e12ea094fc203d5a8f7c8dc46f4fdb}{search\+\_\+breadth\+\_\+first}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, const T \&it, size\+\_\+t \&count)
+\begin{DoxyCompactList}\small\item\em Search a item value in a binary tree following a breadth-\/first order. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_a1c95e99ceb9051da4ef126181d7c688e}{check\+\_\+btree\+\_\+in\+\_\+order}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref const \&tree)
+\begin{DoxyCompactList}\small\item\em Check is a binary tree is in order. A binary tree is in order whether it is the empty tree or when for each subtree, the root node is greater than all its proper left descendants and less than all its proper right descendants. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\bool \mbox{\hyperlink{btree__utils_8hpp_a177a19c20421c90bc4e74865f63aebad}{has\+\_\+in\+\_\+order}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, T const \&v)
+\begin{DoxyCompactList}\small\item\em Search a item into the tree. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{btree__utils_8hpp_abdd60b6a4a11375156d807ce55ce6e1c}{insert\+\_\+in\+\_\+order}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref tree, T const \&v)
+\begin{DoxyCompactList}\small\item\em Insert in orde a value intro a binary tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Copy\+Right F. J. Madrid-\/\+Cuevas \href{mailto:fjmadrid@uco.es}{\texttt{ fjmadrid@uco.\+es}}
+
+Sólo se permite el uso de este código en la docencia de las asignaturas sobre Estructuras de Datos de la Universidad de Córdoba.
+
+Está prohibido su uso para cualquier otro objetivo. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{btree__utils_8hpp_af6901921f3429f3b2c1f8fcdf4d9e9e8}\label{btree__utils_8hpp_af6901921f3429f3b2c1f8fcdf4d9e9e8}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!breadth\_first\_process@{breadth\_first\_process}}
+\index{breadth\_first\_process@{breadth\_first\_process}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{breadth\_first\_process()}{breadth\_first\_process()}}
+{\footnotesize\ttfamily template$<$class T , class Processor $>$ \\
+bool breadth\+\_\+first\+\_\+process (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{Processor \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Bread-\/first processing of a btree. The template class Processor must have an apply interface\+: 
+
+bool Processor\+::operator()(\+T const\& item).
+
+that makes something with item and returning true when the processing must continue or false to stop it.
+
+A lambda expression can be used too.
+
+\begin{DoxyReturn}{Returns}
+true if all nodes were processed. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+tree!=nullptr 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{btree__utils_8hpp_a1c95e99ceb9051da4ef126181d7c688e}\label{btree__utils_8hpp_a1c95e99ceb9051da4ef126181d7c688e}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!check\_btree\_in\_order@{check\_btree\_in\_order}}
+\index{check\_btree\_in\_order@{check\_btree\_in\_order}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{check\_btree\_in\_order()}{check\_btree\_in\_order()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool check\+\_\+btree\+\_\+in\+\_\+order (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref const \&}]{tree }\end{DoxyParamCaption})}
+
+
+
+Check is a binary tree is in order. A binary tree is in order whether it is the empty tree or when for each subtree, the root node is greater than all its proper left descendants and less than all its proper right descendants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & is the tree to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the input tree is in order. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{btree__utils_8hpp_ad61617ff304d328f85464af83e92662d}\label{btree__utils_8hpp_ad61617ff304d328f85464af83e92662d}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!compute\_height@{compute\_height}}
+\index{compute\_height@{compute\_height}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{compute\_height()}{compute\_height()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int compute\+\_\+height (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{t }\end{DoxyParamCaption})}
+
+
+
+Compute the height of a tree. The tree\textquotesingle{}s height is the longitude of the longest branch connecting the root node with a leaf node, or -\/1 if the tree was empty. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & is the tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the tree\textquotesingle{}s height or -\/1 if it is a empty tree. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+t!=nullptr
+\end{DoxyPrecond}
+Copy\+Right F. J. Madrid-\/\+Cuevas \href{mailto:fjmadrid@uco.es}{\texttt{ fjmadrid@uco.\+es}}
+
+Sólo se permite el uso de este código en la docencia de las asignaturas sobre Estructuras de Datos de la Universidad de Córdoba.
+
+Está prohibido su uso para cualquier otro objetivo. \mbox{\Hypertarget{btree__utils_8hpp_ab06eb34a56dd7c5dec26df4b428dad00}\label{btree__utils_8hpp_ab06eb34a56dd7c5dec26df4b428dad00}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!compute\_size@{compute\_size}}
+\index{compute\_size@{compute\_size}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{compute\_size()}{compute\_size()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+size\+\_\+t compute\+\_\+size (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{t }\end{DoxyParamCaption})}
+
+
+
+Compute the number of nodes in the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & is the tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of nodes in the tree. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+t!=nullptr 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{btree__utils_8hpp_a177a19c20421c90bc4e74865f63aebad}\label{btree__utils_8hpp_a177a19c20421c90bc4e74865f63aebad}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!has\_in\_order@{has\_in\_order}}
+\index{has\_in\_order@{has\_in\_order}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{has\_in\_order()}{has\_in\_order()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool has\+\_\+in\+\_\+order (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{T const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Search a item into the tree. 
+
+The input tree must be in order, a optimized search process can be used.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & is a in order binary tree. \\
+\hline
+{\em v} & is the value to be found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+check\+\_\+btree\+\_\+in\+\_\+order(tree) 
+\end{DoxyPrecond}
+\begin{DoxyReturn}{Returns}
+true if the value is in the tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{btree__utils_8hpp_a218799582ef6caf5a301d92f21320205}\label{btree__utils_8hpp_a218799582ef6caf5a301d92f21320205}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!infix\_process@{infix\_process}}
+\index{infix\_process@{infix\_process}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{infix\_process()}{infix\_process()}}
+{\footnotesize\ttfamily template$<$class T , class Processor $>$ \\
+bool infix\+\_\+process (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{Processor \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Infix processing of a binary tree. The template class Processor must have an apply interface\+: 
+
+bool Processor\+::operator()(\+T const\& item).
+
+that makes something with item and returning true when the processing must continue or false to stop it.
+
+A lambda expression can be used too.
+
+\begin{DoxyReturn}{Returns}
+true if all nodes were processed. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+tree!=nullptr 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{btree__utils_8hpp_abdd60b6a4a11375156d807ce55ce6e1c}\label{btree__utils_8hpp_abdd60b6a4a11375156d807ce55ce6e1c}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!insert\_in\_order@{insert\_in\_order}}
+\index{insert\_in\_order@{insert\_in\_order}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{insert\_in\_order()}{insert\_in\_order()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void insert\+\_\+in\+\_\+order (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{T const \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Insert in orde a value intro a binary tree. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{btree__utils_8hpp_a1c95e99ceb9051da4ef126181d7c688e}{check\+\_\+btree\+\_\+in\+\_\+order}} to know what is mean this. If the value is already in tree, nothing is inserted.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em tree} & is the tree where inserting. \\
+\hline
+{\em v} & is the value to be inserted.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+check\+\_\+btree\+\_\+in\+\_\+order(tree) 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+has\+\_\+in\+\_\+order(tree, v) 
+\end{DoxyPostcond}
+\mbox{\Hypertarget{btree__utils_8hpp_a3abaedee2db151dcdee505b1421aa133}\label{btree__utils_8hpp_a3abaedee2db151dcdee505b1421aa133}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!postfix\_process@{postfix\_process}}
+\index{postfix\_process@{postfix\_process}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{postfix\_process()}{postfix\_process()}}
+{\footnotesize\ttfamily template$<$class T , class Processor $>$ \\
+bool postfix\+\_\+process (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{Processor \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Postfix processing of a binary tree. The template class Processor must have an apply interface\+: 
+
+bool Processor\+::operator()(\+T const\& item).
+
+that makes something with item and returning true when the processing must continue or false to stop it.
+
+A lambda expression can be used too.
+
+\begin{DoxyReturn}{Returns}
+true if all nodes were processed. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+tree!=nullptr 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{btree__utils_8hpp_a9ca9cd9257884bf2deeb15193beeacd6}\label{btree__utils_8hpp_a9ca9cd9257884bf2deeb15193beeacd6}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!prefix\_process@{prefix\_process}}
+\index{prefix\_process@{prefix\_process}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{prefix\_process()}{prefix\_process()}}
+{\footnotesize\ttfamily template$<$class T , typename Processor $>$ \\
+bool prefix\+\_\+process (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{Processor \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Prefix processing of a binary tree The template class Processor must have an closure interface\+: 
+
+bool Processor\+::operator()(\+T const\& item).
+
+that makes something with item and returning true when the processing must continue or false to stop it.
+
+A lambda expression can be used too.
+
+\begin{DoxyReturn}{Returns}
+true if all nodes were processed. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+tree!=nullptr 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{btree__utils_8hpp_a7994a8cbe2d4d9740cc1116394ffbd41}\label{btree__utils_8hpp_a7994a8cbe2d4d9740cc1116394ffbd41}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!print\_breadth\_first@{print\_breadth\_first}}
+\index{print\_breadth\_first@{print\_breadth\_first}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{print\_breadth\_first()}{print\_breadth\_first()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::ostream\& print\+\_\+breadth\+\_\+first (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree }\end{DoxyParamCaption})}
+
+
+
+Output the items of a binary tree following a breadth first order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em out} & is the stream used to output data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tree} & is the binary tree to print. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the stream. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{btree__utils_8hpp_afa90cf1a8aa497a59fe67f71ef2bc586}\label{btree__utils_8hpp_afa90cf1a8aa497a59fe67f71ef2bc586}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!print\_infix@{print\_infix}}
+\index{print\_infix@{print\_infix}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{print\_infix()}{print\_infix()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::ostream\& print\+\_\+infix (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree }\end{DoxyParamCaption})}
+
+
+
+Output the items of a binary tree following a in-\/fix order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em out} & is the stream used to output data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tree} & is the binary tree to print. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the stream. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{btree__utils_8hpp_ac16a33c094ae989e2a1455074d8086d7}\label{btree__utils_8hpp_ac16a33c094ae989e2a1455074d8086d7}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!print\_postfix@{print\_postfix}}
+\index{print\_postfix@{print\_postfix}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{print\_postfix()}{print\_postfix()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::ostream\& print\+\_\+postfix (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree }\end{DoxyParamCaption})}
+
+
+
+Output the items of a binary tree following a post-\/fix order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em out} & is the stream used to output data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tree} & is the binary tree to print. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the stream. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{btree__utils_8hpp_a9fcff157300a552c5018d9b1683d1d25}\label{btree__utils_8hpp_a9fcff157300a552c5018d9b1683d1d25}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!print\_prefix@{print\_prefix}}
+\index{print\_prefix@{print\_prefix}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{print\_prefix()}{print\_prefix()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::ostream\& print\+\_\+prefix (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree }\end{DoxyParamCaption})}
+
+
+
+Output the items of a binary tree following a pre-\/fix order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em out} & is the stream used to output data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em tree} & is the binary tree to print. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the stream. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{btree__utils_8hpp_ab5e12ea094fc203d5a8f7c8dc46f4fdb}\label{btree__utils_8hpp_ab5e12ea094fc203d5a8f7c8dc46f4fdb}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!search\_breadth\_first@{search\_breadth\_first}}
+\index{search\_breadth\_first@{search\_breadth\_first}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{search\_breadth\_first()}{search\_breadth\_first()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool search\+\_\+breadth\+\_\+first (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{const T \&}]{it,  }\item[{size\+\_\+t \&}]{count }\end{DoxyParamCaption})}
+
+
+
+Search a item value in a binary tree following a breadth-\/first order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tree} & is the binary tree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em it} & is the item\textquotesingle{}s value to look for. \\
+\hline
+\mbox{\texttt{ out}}  & {\em count} & is the number of processed nodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the item was found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{btree__utils_8hpp_a4b06fffed8e01324138ddd7776482ccb}\label{btree__utils_8hpp_a4b06fffed8e01324138ddd7776482ccb}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!search\_infix@{search\_infix}}
+\index{search\_infix@{search\_infix}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{search\_infix()}{search\_infix()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool search\+\_\+infix (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{const T \&}]{it,  }\item[{size\+\_\+t \&}]{count }\end{DoxyParamCaption})}
+
+
+
+Search a item value in a binary tree following a in-\/fix order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tree} & is the binary tree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em it} & is the item\textquotesingle{}s value to look for. \\
+\hline
+\mbox{\texttt{ out}}  & {\em count} & is the number of processed nodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the item was found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{btree__utils_8hpp_a1ade1a1a17ad3769ed2a371b3c89777e}\label{btree__utils_8hpp_a1ade1a1a17ad3769ed2a371b3c89777e}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!search\_postfix@{search\_postfix}}
+\index{search\_postfix@{search\_postfix}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{search\_postfix()}{search\_postfix()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool search\+\_\+postfix (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{const T \&}]{it,  }\item[{size\+\_\+t \&}]{count }\end{DoxyParamCaption})}
+
+
+
+Search a item value in a binary tree following a post-\/fix order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tree} & is the binary tree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em it} & is the item\textquotesingle{}s value to look for. \\
+\hline
+\mbox{\texttt{ out}}  & {\em count} & is the number of processed nodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the item was found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{btree__utils_8hpp_aee13550f7d238380a2566256492e2959}\label{btree__utils_8hpp_aee13550f7d238380a2566256492e2959}} 
+\index{btree\_utils.hpp@{btree\_utils.hpp}!search\_prefix@{search\_prefix}}
+\index{search\_prefix@{search\_prefix}!btree\_utils.hpp@{btree\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{search\_prefix()}{search\_prefix()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool search\+\_\+prefix (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::Ref}]{tree,  }\item[{const T \&}]{it,  }\item[{size\+\_\+t \&}]{count }\end{DoxyParamCaption})}
+
+
+
+Search a item value in a binary tree following a pre-\/fix order. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tree} & is the binary tree. \\
+\hline
+\mbox{\texttt{ in}}  & {\em it} & is the item\textquotesingle{}s value to look for. \\
+\hline
+\mbox{\texttt{ out}}  & {\em count} & is the number of processed nodes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the item was found. 
+\end{DoxyReturn}

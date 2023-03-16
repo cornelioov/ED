@@ -1,0 +1,161 @@
+\hypertarget{classBTNode}{}\doxysection{B\+T\+Node$<$ T $>$ Class Template Reference}
+\label{classBTNode}\index{BTNode$<$ T $>$@{BTNode$<$ T $>$}}
+
+
+a \mbox{\hyperlink{classBTree}{B\+Tree}}\textquotesingle{}s Node.  
+
+
+
+
+{\ttfamily \#include $<$btree.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$ $>$ \mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}}
+\begin{DoxyCompactList}\small\item\em Define a shared reference to a \mbox{\hyperlink{classBTNode}{B\+T\+Node}}. Manages the storage of a pointer, providing a limited garbage-\/collection facility, possibly sharing that management with other objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{Indent}\textbf{ Observers.}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBTNode_a121572f056ae8f52f65df7b0815a9b35}\label{classBTNode_a121572f056ae8f52f65df7b0815a9b35}} 
+T \mbox{\hyperlink{classBTNode_a121572f056ae8f52f65df7b0815a9b35}{item}} () const
+\begin{DoxyCompactList}\small\item\em Get the data item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBTNode_ac5e9c9c3249b80fbbbeaafae5f6aa98b}\label{classBTNode_ac5e9c9c3249b80fbbbeaafae5f6aa98b}} 
+\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} \mbox{\hyperlink{classBTNode_ac5e9c9c3249b80fbbbeaafae5f6aa98b}{left}} () const
+\begin{DoxyCompactList}\small\item\em get the left child. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBTNode_ab70e0b115ab492dbe5fa39b54ca483be}\label{classBTNode_ab70e0b115ab492dbe5fa39b54ca483be}} 
+\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} \mbox{\hyperlink{classBTNode_ab70e0b115ab492dbe5fa39b54ca483be}{right}} () const
+\begin{DoxyCompactList}\small\item\em get the right child. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Modifiers.}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBTNode_a24f89c24307af59d2b2d63be5ae4dffc}{set\+\_\+item}} (const T \&new\+\_\+it)
+\begin{DoxyCompactList}\small\item\em Set the data item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBTNode_a75d79a21de7fdba5a679ca0d0f0972c2}\label{classBTNode_a75d79a21de7fdba5a679ca0d0f0972c2}} 
+void \mbox{\hyperlink{classBTNode_a75d79a21de7fdba5a679ca0d0f0972c2}{set\+\_\+left}} (\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} new\+\_\+child)
+\begin{DoxyCompactList}\small\item\em Set the left child. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBTNode_acf3af7b1532a5a0c047bd13e26f112de}\label{classBTNode_acf3af7b1532a5a0c047bd13e26f112de}} 
+void \mbox{\hyperlink{classBTNode_acf3af7b1532a5a0c047bd13e26f112de}{set\+\_\+right}} (\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} new\+\_\+child)
+\begin{DoxyCompactList}\small\item\em Set the right child. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Life cicle.}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBTNode_a6a5b458b9125257a40f7e3c29e7a8389}{B\+T\+Node}} (T const \&it=T(), \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} l=nullptr, \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} r=nullptr)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classBTNode}{B\+T\+Node}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBTNode_a0844da8e5fa86efd5423666e50b33dd7}\label{classBTNode_a0844da8e5fa86efd5423666e50b33dd7}} 
+\mbox{\hyperlink{classBTNode_a0844da8e5fa86efd5423666e50b33dd7}{$\sim$\+B\+T\+Node}} ()
+\begin{DoxyCompactList}\small\item\em Destroy a \mbox{\hyperlink{classBTNode}{B\+T\+Node}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} \mbox{\hyperlink{classBTNode_a469a95ec9f043708dcb77130f1d02f57}{create}} (T const \&it, \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} \mbox{\hyperlink{classBTNode_ac5e9c9c3249b80fbbbeaafae5f6aa98b}{left}}=nullptr, \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} \mbox{\hyperlink{classBTNode_ab70e0b115ab492dbe5fa39b54ca483be}{right}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classBTNode}{B\+T\+Node}} using dynamic memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class B\+T\+Node$<$ T $>$}
+
+a \mbox{\hyperlink{classBTree}{B\+Tree}}\textquotesingle{}s Node. 
+
+Copy\+Right F. J. Madrid-\/\+Cuevas \href{mailto:fjmadrid@uco.es}{\texttt{ fjmadrid@uco.\+es}}
+
+Sólo se permite el uso de este código en la docencia de las asignaturas sobre Estructuras de Datos de la Universidad de Córdoba.
+
+Está prohibido su uso para cualquier otro objetivo. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classBTNode_a59f2067a631a634df76034d32ba1aebf}\label{classBTNode_a59f2067a631a634df76034d32ba1aebf}} 
+\index{BTNode$<$ T $>$@{BTNode$<$ T $>$}!Ref@{Ref}}
+\index{Ref@{Ref}!BTNode$<$ T $>$@{BTNode$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Ref}{Ref}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$T$>$ $>$ \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}}}
+
+
+
+Define a shared reference to a \mbox{\hyperlink{classBTNode}{B\+T\+Node}}. Manages the storage of a pointer, providing a limited garbage-\/collection facility, possibly sharing that management with other objects. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://www.cplusplus.com/reference/memory/shared_ptr/}{\texttt{ http\+://www.\+cplusplus.\+com/reference/memory/shared\+\_\+ptr/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBTNode_a6a5b458b9125257a40f7e3c29e7a8389}\label{classBTNode_a6a5b458b9125257a40f7e3c29e7a8389}} 
+\index{BTNode$<$ T $>$@{BTNode$<$ T $>$}!BTNode@{BTNode}}
+\index{BTNode@{BTNode}!BTNode$<$ T $>$@{BTNode$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BTNode()}{BTNode()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode}{B\+T\+Node}} (\begin{DoxyParamCaption}\item[{T const \&}]{it = {\ttfamily T()},  }\item[{\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}}}]{l = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}}}]{r = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{classBTNode}{B\+T\+Node}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & the value save in the node. \\
+\hline
+{\em l} & links to the left child. \\
+\hline
+{\em r} & links to the right child. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{classBTNode_a121572f056ae8f52f65df7b0815a9b35}{item()}}==it 
+
+\mbox{\hyperlink{classBTNode_ac5e9c9c3249b80fbbbeaafae5f6aa98b}{left()}}==l 
+
+\mbox{\hyperlink{classBTNode_ab70e0b115ab492dbe5fa39b54ca483be}{right()}}==r
+\end{DoxyPostcond}
+Copy\+Right F. J. Madrid-\/\+Cuevas \href{mailto:fjmadrid@uco.es}{\texttt{ fjmadrid@uco.\+es}}
+
+Sólo se permite el uso de este código en la docencia de las asignaturas sobre Estructuras de Datos de la Universidad de Córdoba.
+
+Está prohibido su uso para cualquier otro objetivo. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBTNode_a469a95ec9f043708dcb77130f1d02f57}\label{classBTNode_a469a95ec9f043708dcb77130f1d02f57}} 
+\index{BTNode$<$ T $>$@{BTNode$<$ T $>$}!create@{create}}
+\index{create@{create}!BTNode$<$ T $>$@{BTNode$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}} \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::create (\begin{DoxyParamCaption}\item[{T const \&}]{it,  }\item[{\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}}}]{left = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTNode_a59f2067a631a634df76034d32ba1aebf}{Ref}}}]{right = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a \mbox{\hyperlink{classBTNode}{B\+T\+Node}} using dynamic memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em it} & the value save in the node. \\
+\hline
+{\em left} & links to the left child. \\
+\hline
+{\em right} & links to the right child. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a shared referente to the new node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBTNode_a24f89c24307af59d2b2d63be5ae4dffc}\label{classBTNode_a24f89c24307af59d2b2d63be5ae4dffc}} 
+\index{BTNode$<$ T $>$@{BTNode$<$ T $>$}!set\_item@{set\_item}}
+\index{set\_item@{set\_item}!BTNode$<$ T $>$@{BTNode$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set\_item()}{set\_item()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::set\+\_\+item (\begin{DoxyParamCaption}\item[{const T \&}]{new\+\_\+it }\end{DoxyParamCaption})}
+
+
+
+Set the data item. 
+
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{classBTNode_a121572f056ae8f52f65df7b0815a9b35}{item()}}==new\+\_\+it 
+\end{DoxyPostcond}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+btree.\+hpp\item 
+btree\+\_\+imp.\+hpp\end{DoxyCompactItemize}

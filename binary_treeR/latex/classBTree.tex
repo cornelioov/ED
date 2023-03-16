@@ -1,0 +1,385 @@
+\hypertarget{classBTree}{}\doxysection{B\+Tree$<$ T $>$ Class Template Reference}
+\label{classBTree}\index{BTree$<$ T $>$@{BTree$<$ T $>$}}
+
+
+A\+DT \mbox{\hyperlink{classBTree}{B\+Tree}}. Models a \mbox{\hyperlink{classBTree}{B\+Tree}} of T.  
+
+
+
+
+{\ttfamily \#include $<$btree.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$ $>$ \mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}}
+\begin{DoxyCompactList}\small\item\em Define a shared reference to a \mbox{\hyperlink{classBTNode}{B\+T\+Node}}. Manages the storage of a pointer, providing a limited garbage-\/collection facility, possibly sharing that management with other objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{Indent}\textbf{ Observers}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBTree_a47a18cb26255d89a3a7e317983333037}\label{classBTree_a47a18cb26255d89a3a7e317983333037}} 
+bool \mbox{\hyperlink{classBTree_a47a18cb26255d89a3a7e317983333037}{is\+\_\+empty}} () const
+\begin{DoxyCompactList}\small\item\em is the tree empty?. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classBTree_af15af40bba9259f0163b4623594f1e4e}{item}} () const
+\begin{DoxyCompactList}\small\item\em Get the root item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree_a707050923d13b80c2a088931e1c5617c}{left}} () const
+\begin{DoxyCompactList}\small\item\em Get the left subtree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree_ab499ec738b63d1f8d977e2bacd063e1e}{right}} () const
+\begin{DoxyCompactList}\small\item\em Get the right subtree. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{classBTree_a35ac253e4b7310463321fe8e5aeb1432}{fold}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Fold a binary tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Modifiers}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classBTree_ad033f13ff42f3844620f6c410399f1b7}{create\+\_\+root}} (T const \&it)
+\begin{DoxyCompactList}\small\item\em create the root node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBTree_a4f82d57d917efd8853e1e246856b48d3}{set\+\_\+item}} (const T \&new\+\_\+it)
+\begin{DoxyCompactList}\small\item\em set the roor\textquotesingle{}s item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBTree_a8537a32d881729d0fd4658abe52a92f2}{set\+\_\+left}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} new\+\_\+left)
+\begin{DoxyCompactList}\small\item\em Attach a new subtree as left child of root. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBTree_a70cc045bda0281b1b001e613d7aa995b}{set\+\_\+right}} (typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} new\+\_\+right)
+\begin{DoxyCompactList}\small\item\em Attach a new subtree as right child of root. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBTree_a73c7a3fc7f416a7c1b0236f7afb309e3}\label{classBTree_a73c7a3fc7f416a7c1b0236f7afb309e3}} 
+\mbox{\hyperlink{classBTree_a73c7a3fc7f416a7c1b0236f7afb309e3}{B\+Tree}} (typename \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree_a8b67cfe1beb8e5034f38d80435d6fa35}{root}})
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classBTree}{B\+Tree}} using a given node as root. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree_a8b67cfe1beb8e5034f38d80435d6fa35}{root}} () const
+\begin{DoxyCompactList}\small\item\em Get the root node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBTree_a289d32954acbbb03e5b4241b7cafd403}\label{classBTree_a289d32954acbbb03e5b4241b7cafd403}} 
+void \mbox{\hyperlink{classBTree_a289d32954acbbb03e5b4241b7cafd403}{set\+\_\+root}} (typename \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} new\+\_\+root)
+\begin{DoxyCompactList}\small\item\em set a new root node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree_a88873cee1c4e36245b414de8fa75842b}{create}} (typename \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree_a8b67cfe1beb8e5034f38d80435d6fa35}{root}})
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classBTree}{B\+Tree}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Life cicle.}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBTree_a4da1ce5db120e3002726ae8a6ce5847a}{B\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Create an empty \mbox{\hyperlink{classBTree}{B\+Tree}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBTree_a48792251ac8c133c6b26afa6829d15a4}{B\+Tree}} (const T \&\mbox{\hyperlink{classBTree_af15af40bba9259f0163b4623594f1e4e}{item}})
+\begin{DoxyCompactList}\small\item\em Create Leaf \mbox{\hyperlink{classBTree}{B\+Tree}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBTree_a69a20ba2dab56eeb42689731dc9f8db6}\label{classBTree_a69a20ba2dab56eeb42689731dc9f8db6}} 
+\mbox{\hyperlink{classBTree_a69a20ba2dab56eeb42689731dc9f8db6}{$\sim$\+B\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Destroy a \mbox{\hyperlink{classBTree}{B\+Tree}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree_a8dece5f6003dbcecd216d08129df7be0}{create}} ()
+\begin{DoxyCompactList}\small\item\em Create an empty \mbox{\hyperlink{classBTree}{B\+Tree}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree_a7828a56f02f734ba86064c1a735a6c78}{create}} (T const \&\mbox{\hyperlink{classBTree_af15af40bba9259f0163b4623594f1e4e}{item}})
+\begin{DoxyCompactList}\small\item\em Create a leaf \mbox{\hyperlink{classBTree}{B\+Tree}}. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree_a583483961bcdaeaf3bde791ef304342c}{create}} (std\+::istream \&in) noexcept(false)
+\begin{DoxyCompactList}\small\item\em Load a tree from a input stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class B\+Tree$<$ T $>$}
+
+A\+DT \mbox{\hyperlink{classBTree}{B\+Tree}}. Models a \mbox{\hyperlink{classBTree}{B\+Tree}} of T. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classBTree_aab268f025b5347244bb03676ce837cbc}\label{classBTree_aab268f025b5347244bb03676ce837cbc}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!Ref@{Ref}}
+\index{Ref@{Ref}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Ref}{Ref}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classBTree}{B\+Tree}}$<$T$>$ $>$ \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}}}
+
+
+
+Define a shared reference to a \mbox{\hyperlink{classBTNode}{B\+T\+Node}}. Manages the storage of a pointer, providing a limited garbage-\/collection facility, possibly sharing that management with other objects. 
+
+\begin{DoxySeeAlso}{See also}
+\href{http://www.cplusplus.com/reference/memory/shared_ptr/}{\texttt{ http\+://www.\+cplusplus.\+com/reference/memory/shared\+\_\+ptr/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBTree_a4da1ce5db120e3002726ae8a6ce5847a}\label{classBTree_a4da1ce5db120e3002726ae8a6ce5847a}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!BTree@{BTree}}
+\index{BTree@{BTree}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BTree()}{BTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree}{B\+Tree}}}
+
+
+
+Create an empty \mbox{\hyperlink{classBTree}{B\+Tree}}. 
+
+\begin{DoxyPostcond}{Postcondition}
+\mbox{\hyperlink{classBTree_a47a18cb26255d89a3a7e317983333037}{is\+\_\+empty()}}
+\end{DoxyPostcond}
+A\+DT \mbox{\hyperlink{classBTree}{B\+Tree}}. Models a \mbox{\hyperlink{classBTree}{B\+Tree}} of T. \mbox{\Hypertarget{classBTree_a48792251ac8c133c6b26afa6829d15a4}\label{classBTree_a48792251ac8c133c6b26afa6829d15a4}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!BTree@{BTree}}
+\index{BTree@{BTree}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BTree()}{BTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree}{B\+Tree}} (\begin{DoxyParamCaption}\item[{const T \&}]{item }\end{DoxyParamCaption})}
+
+
+
+Create Leaf \mbox{\hyperlink{classBTree}{B\+Tree}}. 
+
+\begin{DoxyPostcond}{Postcondition}
+not \mbox{\hyperlink{classBTree_a47a18cb26255d89a3a7e317983333037}{is\+\_\+empty()}} 
+
+\mbox{\hyperlink{classBTree_a707050923d13b80c2a088931e1c5617c}{left()}}-\/$>$is\+\_\+emtpy() 
+
+\mbox{\hyperlink{classBTree_ab499ec738b63d1f8d977e2bacd063e1e}{right()}}-\/$>$is\+\_\+emtpy() 
+\end{DoxyPostcond}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBTree_a8dece5f6003dbcecd216d08129df7be0}\label{classBTree_a8dece5f6003dbcecd216d08129df7be0}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!create@{create}}
+\index{create@{create}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::create\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create an empty \mbox{\hyperlink{classBTree}{B\+Tree}}. 
+
+\begin{DoxyReturn}{Returns}
+a shared referente to the new tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBTree_a583483961bcdaeaf3bde791ef304342c}\label{classBTree_a583483961bcdaeaf3bde791ef304342c}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!create@{create}}
+\index{create@{create}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::create (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{in }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+Load a tree from a input stream. 
+
+The input format will be\+: \textquotesingle{}\mbox{[}\mbox{]}\textquotesingle{} for the empty tree. \textquotesingle{}\mbox{[}  $<$left-\/subtree$>$ $<$right-\/subtree$>$ \textquotesingle{}\mbox{]}\textquotesingle{}
+
+For example a tree with three nodes\+: \char`\"{}\mbox{[} 2 \mbox{[} 1 \mbox{[}$\,$\mbox{]} \mbox{[}$\,$\mbox{]} \mbox{]} \mbox{[} 3 \mbox{[}$\,$\mbox{]} \mbox{[}$\,$\mbox{]} \mbox{]} \mbox{]}\char`\"{}
+
+\begin{DoxyReturn}{Returns}
+a reference to the tree created. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+runtime\+\_\+error will throw if worng input format was found. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classBTree_a7828a56f02f734ba86064c1a735a6c78}\label{classBTree_a7828a56f02f734ba86064c1a735a6c78}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!create@{create}}
+\index{create@{create}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::create (\begin{DoxyParamCaption}\item[{T const \&}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a leaf \mbox{\hyperlink{classBTree}{B\+Tree}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & is the root\textquotesingle{}s item. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a shared referente to the new tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBTree_a88873cee1c4e36245b414de8fa75842b}\label{classBTree_a88873cee1c4e36245b414de8fa75842b}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!create@{create}}
+\index{create@{create}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::create (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}}}]{root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Create a \mbox{\hyperlink{classBTree}{B\+Tree}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & is the root node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPostcond}{Postcondition}
+root!=nullptr or \mbox{\hyperlink{classBTree_a47a18cb26255d89a3a7e317983333037}{is\+\_\+empty()}} 
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+a shared referente to the new tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBTree_ad033f13ff42f3844620f6c410399f1b7}\label{classBTree_ad033f13ff42f3844620f6c410399f1b7}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!create\_root@{create\_root}}
+\index{create\_root@{create\_root}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{create\_root()}{create\_root()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::create\+\_\+root (\begin{DoxyParamCaption}\item[{T const \&}]{it }\end{DoxyParamCaption})}
+
+
+
+create the root node. 
+
+\begin{DoxyItemize}
+\item it is the item to be stored. \begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{classBTree_a47a18cb26255d89a3a7e317983333037}{is\+\_\+empty()}} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+!is\+\_\+empty() 
+
+\mbox{\hyperlink{classBTree_af15af40bba9259f0163b4623594f1e4e}{item()}}==it 
+
+\mbox{\hyperlink{classBTree_a707050923d13b80c2a088931e1c5617c}{left()}}-\/$>$\mbox{\hyperlink{classBTree_a47a18cb26255d89a3a7e317983333037}{is\+\_\+empty()}} 
+
+\mbox{\hyperlink{classBTree_ab499ec738b63d1f8d977e2bacd063e1e}{right()}}-\/$>$\mbox{\hyperlink{classBTree_a47a18cb26255d89a3a7e317983333037}{is\+\_\+empty()}} 
+\end{DoxyPostcond}
+\end{DoxyItemize}
+\mbox{\Hypertarget{classBTree_a35ac253e4b7310463321fe8e5aeb1432}\label{classBTree_a35ac253e4b7310463321fe8e5aeb1432}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!fold@{fold}}
+\index{fold@{fold}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fold()}{fold()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::ostream \& \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::fold (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Fold a binary tree. 
+
+The output format will be\+: \textquotesingle{}\mbox{[}\mbox{]}\textquotesingle{} for the empty tree. \textquotesingle{}\mbox{[}  $<$left-\/subtree$>$ $<$right-\/subtree$>$ \textquotesingle{}\mbox{]}\textquotesingle{}
+
+For example a tree with three nodes\+: \char`\"{}\mbox{[} 2 \mbox{[} 1 \mbox{[}$\,$\mbox{]} \mbox{[}$\,$\mbox{]} \mbox{]} \mbox{[} 3 \mbox{[}$\,$\mbox{]} \mbox{[}$\,$\mbox{]} \mbox{]} \mbox{]}\char`\"{}
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & is the output stream. \\
+\hline
+{\em tree} & is the tree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the output stream. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+tree!=nullptr 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classBTree_af15af40bba9259f0163b4623594f1e4e}\label{classBTree_af15af40bba9259f0163b4623594f1e4e}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!item@{item}}
+\index{item@{item}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{item()}{item()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::item}
+
+
+
+Get the root item. 
+
+\begin{DoxyPrecond}{Precondition}
+not \mbox{\hyperlink{classBTree_a47a18cb26255d89a3a7e317983333037}{is\+\_\+empty()}}; 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classBTree_a707050923d13b80c2a088931e1c5617c}\label{classBTree_a707050923d13b80c2a088931e1c5617c}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!left@{left}}
+\index{left@{left}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{left()}{left()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::left}
+
+
+
+Get the left subtree. 
+
+\begin{DoxyReturn}{Returns}
+a reference to the left subtree. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+!is\+\_\+empty() 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classBTree_ab499ec738b63d1f8d977e2bacd063e1e}\label{classBTree_ab499ec738b63d1f8d977e2bacd063e1e}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!right@{right}}
+\index{right@{right}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{right()}{right()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::right}
+
+
+
+Get the right subtree. 
+
+\begin{DoxyReturn}{Returns}
+a reference to the right subtree. 
+\end{DoxyReturn}
+\begin{DoxyPrecond}{Precondition}
+!is\+\_\+empty() ~\newline
+ 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classBTree_a8b67cfe1beb8e5034f38d80435d6fa35}\label{classBTree_a8b67cfe1beb8e5034f38d80435d6fa35}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!root@{root}}
+\index{root@{root}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{root()}{root()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classBTNode}{B\+T\+Node}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}} \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::root\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Get the root node. 
+
+\begin{DoxyReturn}{Returns}
+a reference to the root node or nullptr if it is empty. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBTree_a4f82d57d917efd8853e1e246856b48d3}\label{classBTree_a4f82d57d917efd8853e1e246856b48d3}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!set\_item@{set\_item}}
+\index{set\_item@{set\_item}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set\_item()}{set\_item()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::set\+\_\+item (\begin{DoxyParamCaption}\item[{const T \&}]{new\+\_\+it }\end{DoxyParamCaption})}
+
+
+
+set the roor\textquotesingle{}s item. 
+
+\begin{DoxyPrecond}{Precondition}
+not \mbox{\hyperlink{classBTree_a47a18cb26255d89a3a7e317983333037}{is\+\_\+empty()}} 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classBTree_a8537a32d881729d0fd4658abe52a92f2}\label{classBTree_a8537a32d881729d0fd4658abe52a92f2}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!set\_left@{set\_left}}
+\index{set\_left@{set\_left}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set\_left()}{set\_left()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::set\+\_\+left (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}}}]{new\+\_\+left }\end{DoxyParamCaption})}
+
+
+
+Attach a new subtree as left child of root. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+left} & is the new left subtree. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+!is\+\_\+empty() 
+\end{DoxyPrecond}
+\mbox{\Hypertarget{classBTree_a70cc045bda0281b1b001e613d7aa995b}\label{classBTree_a70cc045bda0281b1b001e613d7aa995b}} 
+\index{BTree$<$ T $>$@{BTree$<$ T $>$}!set\_right@{set\_right}}
+\index{set\_right@{set\_right}!BTree$<$ T $>$@{BTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{set\_right()}{set\_right()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::set\+\_\+right (\begin{DoxyParamCaption}\item[{typename \mbox{\hyperlink{classBTree}{B\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{classBTree_aab268f025b5347244bb03676ce837cbc}{Ref}}}]{new\+\_\+right }\end{DoxyParamCaption})}
+
+
+
+Attach a new subtree as right child of root. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+right} & is the new right subtree. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+btree.\+hpp\item 
+btree\+\_\+imp.\+hpp\end{DoxyCompactItemize}
